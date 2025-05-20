@@ -14,13 +14,25 @@
 <body>
     <div id="example"></div>
     <script type="text/babel">
-        // 简单的 React 组件
-        function App() {
-            return <h1>Hello, React!</h1>;
+        // MyButton 函数组件
+        function MyButton() {
+            return (
+                <button>我是一个按钮</button>
+            );
         }
 
+        // 根组件 App
+        function App() {
+            return (
+                <div>
+                    <h1>欢迎来到我的应用</h1>
+                    <MyButton />
+                </div>
+            );
+        }
+
+        // 创建根节点并渲染 App 组件
         const root = ReactDOM.createRoot(document.getElementById("example"));
-        // 渲染 React 组件到 DOM
         root.render(<App />);
     </script>
 </body>
